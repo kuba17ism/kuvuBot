@@ -74,8 +74,14 @@ client.on('message', message => {
                 .setFooter('© 2016-2017 kuvuBot Team')
                 .setThumbnail('https://cdn.discordapp.com/app-icons/205965155282976768/ea38f145269800017987c7252fd2b21a.png')
                 .setURL('https://bot.kuvus.pl')
-                .addField(':information_source:  Komendy', "[.pomoc](javascript:;) - wyświetla pomoc dotyczącą bota\n[.ping](javascript:;) - wysyła \"ping\"\n[.text](javascript:;) <tekst> - generuje tekst w postaci emoji\n[.rawtext](javascript:;) <tekst> - generuje tekst w postaci kodu emoji\n[.avatar](javascript:;) [wzmianka] - wysyła link avatara konkretnego użytkownika\n[.serwery](javascript:;) - wyświetla serwery na których jest kuvuBot\n[.react](javascript:;) <tekst> - bot reaguje tekstem na wiadomość")
-                .addField(':link:  Linki', 'WWW: [bot.kuvus.pl](https://bot.kuvus.pl)\nGitHub: https://github.com/kuvus/kuvuBot\n\n[Dodaj kuvuBota na swój serwer!](https://discordapp.com/oauth2/authorize?&client_id=205965155282976768&scope=bot&permissions=268561430)')
+                .addField('ℹ️  Komendy', "[.pomoc](javascript:;) - wyświetla pomoc dotyczącą bota")
+	        .addField('\xa0', "[.ping](javascript:;) - wysyła \"ping\"")
+	        .addField('\xa0', "[.text](javascript:;) <tekst> - generuje tekst w postaci emoji")
+	        .addField('\xa0', "[.rawtext](javascript:;) <tekst> - generuje tekst w postaci kodu emoji")
+	        .addField('\xa0', "[.avatar](javascript:;) [wzmianka] - wysyła link avatara konkretnego użytkownika")
+	        .addField('\xa0', "[.serwery](javascript:;) - wyświetla serwery na których jest kuvuBot")
+	        .addField('\xa0', "[.react](javascript:;) <tekst> - bot reaguje tekstem na wiadomość")
+                .addField('🔗  Linki', 'WWW: [bot.kuvus.pl](https://bot.kuvus.pl)\nGitHub: https://github.com/kuvus/kuvuBot\n\n[Dodaj kuvuBota na swój serwer!](https://discordapp.com/oauth2/authorize?&client_id=205965155282976768&scope=bot&permissions=268561430)')
             message.author.sendEmbed(
                 embed,
                 'Oto podstawowe infomacje o bocie:',
@@ -97,7 +103,7 @@ client.on('message', message => {
                     let result = '';
                     users.forEach(function (user) {
                         let avatar = user.avatarURL;
-                        result += (avatar == null ? '<brak awatara>' : avatar) + '\n';
+                        result += (avatar == null ? 'ten awatar nie został jeszcze ustawiony!' : avatar) + '\n';
                     });
                     message.reply(result);
                 } else {
